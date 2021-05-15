@@ -4,14 +4,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { computed, defineComponent } from "vue";
+import { useStore } from "./store";
 import HelloWorld from "./components/HelloWorld.vue";
+import { ActionTypes as NActionTypes} from "./store/modules/news/actions"
 
 export default defineComponent({
   name: "App",
   components: {
     HelloWorld,
   },
+  setup() {
+    const store = useStore()
+    const news = computed(()=>store.state.news)
+    store.dispatch('news/'+ NActionTypes.FETCH_NEWS)
+  }
 });
 </script>
 

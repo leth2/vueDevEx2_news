@@ -11,4 +11,4 @@ const newsModule: Module<NewsState, RootState> = {
   state,
 };
 
-export default newsModule;
+export  {newsModule};
