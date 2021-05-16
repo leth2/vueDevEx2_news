@@ -1,4 +1,4 @@
-import { NewsItem } from "@/api";
+import { NewsItem } from '@/api';
 
 interface NewsState {
   item: NewsItem[];

@@ -1,8 +1,8 @@
-import { NewsState } from "./state";
-import { NewsItem } from "@/api";
+import { NewsState } from './state';
+import { NewsItem } from '@/api';
 
 enum MutationTypes {
-  SET_NEWS = "SET_NEWS",
+  SET_NEWS = 'SET_NEWS',
 }
 
 const mutations = {

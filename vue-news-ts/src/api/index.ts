@@ -1,11 +1,11 @@
-import axios, { AxiosPromise } from "axios";
+import axios, { AxiosPromise } from 'axios';
 
 const api = {
-  news: "https://api.hnpwa.com/v0/news/1.json",
-  ask: "https://api.hnpwa.com/v0/ask/1.json",
-  jobs: "https://api.hnpwa.com/v0/jobs/1.json",
-  user: "https://api.hnpwa.com/v0/user/",
-  item: "https://api.hnpwa.com/v0/item/",
+  news: 'https://api.hnpwa.com/v0/news/1.json',
+  ask: 'https://api.hnpwa.com/v0/ask/1.json',
+  jobs: 'https://api.hnpwa.com/v0/jobs/1.json',
+  user: 'https://api.hnpwa.com/v0/user/',
+  item: 'https://api.hnpwa.com/v0/item/',
 };
 interface NewsItem {
   comments_count: number;
