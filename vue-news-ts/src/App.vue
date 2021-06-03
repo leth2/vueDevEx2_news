@@ -2,13 +2,8 @@
   <!-- <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" /> -->
   <div>
-    <ul>
-      <li v-for="(article, index) in news.item" :key="index">
-        <a :href="article.url"
-          ><span>{{ `${article.title} by ${article.user} when ${article.time_ago}` }}</span></a
-        >
-      </li>
-    </ul>
+    <ToolBar />
+    <ListItem :items="news.item"></ListItem>
   </div>
 </template>
 
@@ -16,8 +11,14 @@
 import { computed, defineComponent, onMounted } from 'vue';
 import { getFullDispatchPath, NamedSpace, useStore } from './store';
 import { ActionTypes as NActionTypes } from './store/modules/news/actions';
+import ListItem from './components/ListItem.vue';
+import ToolBar from './components/ToolBar.vue';
 
 export default defineComponent({
+  components: {
+    ListItem,
+    ToolBar,
+  },
   name: 'App',
   setup() {
     const store = useStore();
@@ -37,12 +38,7 @@ export default defineComponent({
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  margin: 0;
 }
 </style>
